@@ -69,10 +69,13 @@ public class AdminPanel {
     @FindBy(xpath = "//body/div[@id='app']/main[1]/div[1]/div[1]/div[1]/button[1]")
     WebElement btnAdd;
 
-    @FindBy(xpath = "//*[@id=\"app\"]/main/div/div/div[2]/div/div/nav/ul/div/nav/ul/li[4]/button")
+    @FindBy(xpath = "//button[normalize-space()='>']")
     WebElement btnNext;
 
-    @FindBy(xpath = "/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[20]/td[5]/button[2]")
+//    @FindBy(xpath = "//button[normalize-space()='>']")
+//    WebElement btnNext1;
+
+    @FindBy(xpath = "/html/body/div/main/div/div/div[2]/div/table/tbody/tr[20]/td[5]/button[2]")
     WebElement btnManage;
     //***** Company Deploy *****//
 

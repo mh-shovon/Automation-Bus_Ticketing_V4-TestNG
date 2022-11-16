@@ -144,18 +144,18 @@ public class AdminPanelTestRunner extends Setup {
     public void clickNextButton() throws InterruptedException {
         adminPanel = new AdminPanel(driver);
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,350)", "");
-//        Thread.sleep(5000);
-//        adminPanel.btnNext.click();
+        js.executeScript("window.scrollBy(0,500)", "");
+        Thread.sleep(5000);
+        adminPanel.btnNext.click();
         Thread.sleep(1000);
     }
 
     @Test(priority = 20)
     public void manageCompany2() throws InterruptedException {
         adminPanel = new AdminPanel(driver);
-        adminPanel.btnNext.click();
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,350)", "");
+//        adminPanel.btnNext1.click();
+//        JavascriptExecutor js = (JavascriptExecutor) driver;
+//        js.executeScript("window.scrollBy(0,500)", "");
         adminPanel.btnManage.click();
         Thread.sleep(1000);
     }
