@@ -1,3 +1,4 @@
+import javafx.scene.layout.Priority;
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
@@ -148,14 +149,15 @@ public class AdminPanelTestRunner extends Setup {
         Thread.sleep(5000);
         adminPanel.btnNext.click();
         Thread.sleep(1000);
+        JavascriptExecutor js1 = (JavascriptExecutor) driver;
+        js1.executeScript("window.scrollBy(0,500)", "");
+        Thread.sleep(1000);
     }
+
 
     @Test(priority = 20)
     public void manageCompany2() throws InterruptedException {
         adminPanel = new AdminPanel(driver);
-//        adminPanel.btnNext1.click();
-//        JavascriptExecutor js = (JavascriptExecutor) driver;
-//        js.executeScript("window.scrollBy(0,500)", "");
         adminPanel.btnManage.click();
         Thread.sleep(1000);
     }
@@ -186,9 +188,9 @@ public class AdminPanelTestRunner extends Setup {
         Thread.sleep(500);
         adminPanel.clickToDate.click();
         Thread.sleep(500);
-        ///adminPanel.setToDate.click();
-//        Thread.sleep(500);
-//        adminPanel.btnGoBack.isDisplayed();
+        adminPanel.setToDate.sendKeys("18-Nov-2022");
+        Thread.sleep(500);
+        adminPanel.btnGoBack.isDisplayed();
     }
 
     @Test(enabled = false)

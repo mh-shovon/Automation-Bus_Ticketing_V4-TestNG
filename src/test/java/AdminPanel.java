@@ -72,10 +72,7 @@ public class AdminPanel {
     @FindBy(xpath = "//button[normalize-space()='>']")
     WebElement btnNext;
 
-//    @FindBy(xpath = "//button[normalize-space()='>']")
-//    WebElement btnNext1;
-
-    @FindBy(xpath = "/html/body/div/main/div/div/div[2]/div/table/tbody/tr[20]/td[5]/button[2]")
+    @FindBy(xpath = "//tbody/tr[20]/td[5]/button[2]/span[1]")
     WebElement btnManage;
     //***** Company Deploy *****//
 
@@ -217,10 +214,10 @@ public class AdminPanel {
         clickRoutDropDown.click();
         setRouteName.click();
         clickFromDate.click();
-        clickNextDate.click();
-        setFromDate.click();
+        setFromDate.sendKeys();
         clickToDate.click();
-        setToDate.click();
+        setToDate.sendKeys();
+
         return btnGoBack.isDisplayed();
     }
 
