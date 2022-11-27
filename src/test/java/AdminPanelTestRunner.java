@@ -180,16 +180,16 @@ public class AdminPanelTestRunner extends Setup {
     public void createTrip() throws InterruptedException {
         adminPanel.clickRouteDropDown.click();
         Thread.sleep(500);
-//        adminPanel.setRouteName.click();
-//        Thread.sleep(500);
+        adminPanel.setRouteName.click();
+        Thread.sleep(500);
         adminPanel.clickFromDate.click();
         Thread.sleep(500);
-//        adminPanel.setFromDate.click();
-//        Thread.sleep(500);
+        adminPanel.setFromDate.click();
+        Thread.sleep(500);
         adminPanel.clickToDate.click();
         Thread.sleep(500);
-//        adminPanel.setToDate.sendKeys("18-Nov-2022");
-//        Thread.sleep(500);
+        adminPanel.setToDate.sendKeys("18-Nov-2022");
+        Thread.sleep(500);
         adminPanel.btnGoBack.isDisplayed();
     }
 

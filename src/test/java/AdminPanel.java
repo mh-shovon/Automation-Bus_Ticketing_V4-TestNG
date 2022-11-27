@@ -86,18 +86,18 @@ public class AdminPanel {
     WebElement btnGoBack;
     @FindBy(xpath = "//select[@id='route']")
     WebElement clickRouteDropDown;
-//    @FindBy(xpath = "//*[@id=\"route\"]/option[4]")
-//    WebElement setRouteName;
+    @FindBy(xpath = "//*[@id=\"route\"]/option[4]")
+    WebElement setRouteName;
     @FindBy(xpath = "//*[@id=\"myTabContent\"]/div[17]/form/div/div[1]/div[1]/div[2]/div/div/div/div/div[2]/div[1]/div/div[2]/div[36]/span")
     WebElement clickFromDate;
-//    @FindBy(xpath = "//*[@id=\"myTabContent\"]/div[15]/form/div/div[1]/div[1]/div[3]/div/div/div/div/div[2]/div[1]/div/div[2]/div[38]/span")
-//    WebElement setFromDate;
+    @FindBy(xpath = "//*[@id=\"myTabContent\"]/div[15]/form/div/div[1]/div[1]/div[3]/div/div/div/div/div[2]/div[1]/div/div[2]/div[38]/span")
+    WebElement setFromDate;
     @FindBy(xpath = "//*[@id=\"myTabContent\"]/div[17]/form/div/div[1]/div[1]/div[3]/div/div/div/div/div[2]/div[1]/div/div[2]/div[39]/span")
     WebElement clickToDate;
-//    @FindBy(xpath = "//body/div[@id='app']/main[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[15]/form[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/*[1]")
-//    WebElement clickNextDate;
-//    @FindBy(xpath = "//body/div[@id='app']/main[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[15]/form[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[41]/span[1]")
-//    WebElement setToDate;
+    @FindBy(xpath = "//body/div[@id='app']/main[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[15]/form[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[2]/*[1]")
+    WebElement clickNextDate;
+    @FindBy(xpath = "//body/div[@id='app']/main[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[15]/form[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[41]/span[1]")
+    WebElement setToDate;
 
     @FindBy(xpath = "//body/div[@id='app']/main[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[15]/form[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/input[1]")
     WebElement clickTime;
@@ -212,11 +212,11 @@ public class AdminPanel {
 
     public boolean createTrip(){
         clickRouteDropDown.click();
-        //setRouteName.click();
+        setRouteName.click();
         clickFromDate.click();
-        //setFromDate.sendKeys("27-Nov-2022");
+        setFromDate.sendKeys("27-Nov-2022");
         clickToDate.click();
-        //setToDate.sendKeys("30-Nov-2022");
+        setToDate.sendKeys("30-Nov-2022");
         return btnGoBack.isDisplayed();
     }
 
